@@ -6,7 +6,7 @@ $(document).ready(function() {
     authDomain: "rps-multiplayer-9cb98.firebaseapp.com",
     databaseURL: "https://rps-multiplayer-9cb98.firebaseio.com",
     projectId: "rps-multiplayer-9cb98",
-    storageBucket: "",
+    storageBucket: "rps-multiplayer-9cb98.appspot.com",
     messagingSenderId: "840316592013"
   };
   firebase.initializeApp(config);
