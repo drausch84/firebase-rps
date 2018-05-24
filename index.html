@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Multi-Player Rock Paper Scissors</title>
+    <!-- jQuery library added -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <!-- Links to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.6/firebase.js"></script>
+
+    <!-- Bootstrap added -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+     <!-- Google Fonts added -->
+    <link href="https://fonts.googleapis.com/css?family=Acme|Modern+Antiqua" rel="stylesheet">
+    <!-- css stylesheets added -->
+    <link rel = "stylesheet" type = "text/css" href = "./assets/css/reset.css">
+    <link rel = "stylesheet" type = "text/css" href = "./assets/css/style.css">
+    <!-- javascript added -->
+    <script src = "./assets/js/game.js"></script>
+</head>
+
+<body>
+        <!-- jumbotron added -->
+	  	<div class="jumbotron">
+            <h1 class="text-center"><strong>Multiplayer Rock Paper Scissors</strong></h1>
+	      <h2 class="text-center">Enter your name to start the game</h2>
+	    </div> 
+            <!-- name submission form in center of page -->
+        <div class="row">
+            <div class="col-xs-4 offset-5"></div>
+            <div class="col-xs-4 text-center">
+                <div id="custom-name-input">
+                    <form>
+                        <div class="input-group col-xs-12 form-group">
+                            <input id="name" type="text" class="form-control" placeholder="Your Name"/>
+                            <span class="input-group-btn">
+                            <button class="btn btn-dark" type="submit" id="submit-button">Submit</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-xs-4"></div>
+        </div>
+    
+	   	<!-- game data area -->
+		<div class="panel panel-default">
+		    <div class="row"> 
+
+		    	<!-- section for Player 1 -->
+		        <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default playerPanel" id="playerPanel1">
+		                <div class="panel-heading panelName">
+							<h3 class="panel-title text-center" id="playerOneName"></h3>
+						</div>
+                            <!-- selection(RPS) area -->
+		                <div class="panel-body panelOption">
+		                	<div class="option"><img class="img-responsive choice-img rounded mx-auto d-block" src="./assets/images/rock-rps.jpg" height = "60" width = "80"/></div>
+		                </div>
+
+		                <div class="panel-body panelOption">
+		                	<div class="option"><img class="img-responsive choice-img rounded mx-auto d-block" src="./assets/images/paper-rps.jpg" height = "60" width = "80"/></div>
+		                </div>
+
+		                <div class="panel-body panelOption">
+		                	<div class="option"><img class="img-responsive choice-img rounded mx-auto d-block" src="./assets/images/scissors-rps.jpg" height = "60" width = "80"/></div>
+		                </div>
+
+                        <!-- player 1 stats area -->
+		                <div class="panel-body panelStats text-center">
+		                	<div class="stats" id="player1Stats"></div>
+		                </div>
+		            </div>
+		        </div> 
+		        
+		        <!-- game outcome area -->
+		        <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default gamePanel">
+		            	<h3 class="panel-title text-center" id="waitingNotice"></h3>
+		            	<h3 class="panel-title text-center" id="roundOutcome">Rock-Paper-Scissors</h3>
+		            </div>
+		        </div> 
+		        
+		        <!-- section for player 2-->
+		        <div class="col-lg-4 col-md-4 col-sm-4">
+		            <div class="panel panel-default playerPanel" id="playerPanel2">
+		                <div class="panel-heading panelName">
+							<h3 class="panel-title text-center" id="playerTwoName"></h3>
+						</div>
+                        <!-- selection(RPS) area -->
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><img class="img-responsive choice-img" src="./assets/images/rock-rps.jpg" height = "60" width = "80"/></div>
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><img class="img-responsive choice-img" src="./assets/images/paper-rps.jpg" height = "60" width = "80"/></div>
+		                </div>
+
+		                <div class="panel-body panelOption text-center">
+		                	<div class="option"><img class="img-responsive choice-img" src="./assets/images/scissors-rps.jpg" height = "60" width = "80"/></div>
+		                </div>
+
+                        <!-- player 2 stats -->
+		                <div class="panel-body panelStats text-center">
+		                	<div class="stats" id="player2Stats"></div>
+		                </div>
+		            </div>
+		        </div> 
+		        
+		    </div> 
+		</div> 
+
+	    <!-- chat input area -->
+	    <div class="row">
+
+            <div class="col-md-4 offset-4"> 
+		    	<div class="chatInput">
+		    		<div class="chatLabel">Start Chatting!</div>
+
+					<div class="chatPanel"> 
+						<form id="chat-form">
+							<textarea type="text" id="chat-input"></textarea>
+							<input id="chat-send" type="submit" value="Send">
+						</form>
+					</div>
+				</div>
+	      	</div> 
+              <!-- section for chat display -->
+	    	<div class="col-md-4 offset-4">
+	    		<div id="chatDisplay"></div>
+	    	</div>
+
+		    
+
+        </div> 
+            <!-- footer -->
+    <footer class="page-footer font-small blue pt-4 mt-4">
+       
+        <div class="footer-copyright py-3 text-center">
+            © 2018 Copyright: David Rausch
+        </div>
+        
+      
+      </footer>
+</body>
+</html>

@@ -1,0 +1,212 @@
+body {
+	background: url('http://psd.fanextra.com/wp-content/uploads/2011/08/splatterface4a.jpg');
+	background-size: cover;
+}
+
+.jumbotron {
+  background: linear-gradient(black, darkgray);
+  padding: 3.0em 0.5em;
+  margin: 4.0em 0.0em 1.5em 0.0em;
+  width: 100%;
+  box-shadow: 10px 10px 5px ghostwhite;
+}
+
+.jumbotron h1 {
+    font-family: 'Acme', sans-serif;
+	font-size: 4em;
+    color: mintcream;
+}
+
+.jumbotron h2 {
+    font-family: 'Modern Antiqua';
+	  font-size: 2em;
+    color: mintcream;
+}
+#name{
+  font-family: 'Modern Antiqua';
+  font-size: 16px;
+  color:black;
+  background:mintcream;
+}
+#submit-button{
+  font-family: 'Modern Antiqua';
+  font-size: 16px;
+  color:black;
+  background:mintcream;
+}
+
+.formPanel {
+	width: 100%;
+	height: 50px;
+	border-radius: 10px;
+	background-color: transparent;
+	margin: 0.0em 0.0em 2.0em 0.0em;
+}
+
+.panel {
+	background-color: transparent;
+	border: none;
+}
+
+.playerPanel {
+	height: 283px;
+	background-color: transparent;
+  border-radius: 10px;
+  border-color:darkslategray;
+}
+
+.playerPanelTurn {
+	border: 5px solid #27CC73;
+}
+
+.playerPanel .panelName {
+	height: 50px;
+	background:ghostwhite;
+	text-align: center;
+	font-weight: bold;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.playerPanel .panelName h3 {
+	font-size: 2em;
+	color: #b03138;
+	margin: 0.25em 0em 0em 0em;
+}
+
+.playerPanel .panelOption {
+	height: 70px;
+  background:lightgray;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.playerPanel .panelOption .option {
+	margin: -0.2em 0em 0em 0em;
+}
+
+.playerPanel .panelOption:hover {
+	background: mintcream;
+}
+
+.playerPanel .panelOption:active {
+  background:black;
+}
+
+.playerPanel .panelStats {
+	height: 50px;
+  background: ghostwhite;
+  font-family: 'Modern Antiqua';
+	text-align: center;
+	font-weight: normal;
+	font-size: 1.5em;
+	color: black;
+	border-radius: 0px 0px 10px 10px;
+}
+
+.gamePanel {
+	height: 281px;
+	background:mintcream;
+	border: 3px solid black;
+	border-radius: 10px;
+}
+
+.gamePanel h3 {
+  background:black;
+  font-family: 'Acme', sans-serif;
+	font-size: 3.5em;
+	color: ghostwhite;
+	margin: 1.25em 0em 0em 0em;
+}
+
+#waitingNotice {
+	font-size: 1.5em;
+	color: #efad0d;
+	font-style: italic;
+	font-weight: normal;
+}
+
+
+#chatDisplay {
+	height: 150px;
+	width: 100%;
+	overflow: auto;
+	text-align: left;
+  	border-radius: 10px;
+  	background: #cdd9ea;
+	font-size: 1em;
+	color: #084596;
+	padding: 1em 1em 1em 1em;
+}
+
+.chatInput {
+	height: 150px;
+  	border-radius: 10px;
+  	background:black;
+}
+
+.chatLabel {
+  font-size: 1.5em;
+  font-family: 'Modern Antiqua';
+	color: mintcream;
+	text-align: center;
+	font-weight: bold;
+	padding: 0.5em 0em 0.5em 0em;
+}
+
+#chat-input {
+	width: 60%;
+	height: 90px;
+	margin-left: 15px;
+	margin-right: 5px;
+	color: black;
+	text-align: center;
+	border-radius: 10px;
+	background: mintcream;
+}
+
+#chat-input:focus {
+	color: #084596;
+	background: white;
+}
+
+#chat-send {
+	width: 30%;
+	height: 90px;
+	margin-left: 5px;
+	margin-right: 5px;
+  border-radius: 10px;
+  font-family:'Modern Antiqua';
+  color:mintcream;
+  background: darkgray;
+	font-weight: normal;
+	position: relative;
+	top: -40px;
+}
+
+.chatColor1 {
+	color: lightgray;
+}
+
+.chatColor2 {
+	color:lightblue;
+}
+
+.chatColorDisconnected {
+	color: orangered;
+	font-style: italic;
+}
+
+.chatColorJoined {
+	color: darkslategray;
+	font-style: italic;
+}
+
+img{
+  margin:10px;
+}
+
+.page-footer{
+  background: linear-gradient(black, darkgray);
+  color:ghostwhite;
+  font-family: 'Acme', sans-serif;
+}
